@@ -1,0 +1,333 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --color-dark: #121212;
+    --color-medium-dark: #1f1f1f;
+    --color-accent: #00bcd4; /* Cyan/Teal for accents */
+    --color-text-light: #f4f4f4;
+    --color-text-fade: #a0a0a0;
+    --spacing-lg: 4rem;
+    --spacing-md: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+/* --- Header & Navigation --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--spacing-lg);
+    background-color: var(--color-medium-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.nav a {
+    margin-left: var(--spacing-md);
+    padding: 0.5rem 0;
+    color: var(--color-text-light);
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.nav-toggle { display: none; } /* Hidden on desktop */
+
+/* --- Sections Layout --- */
+section {
+    padding: var(--spacing-lg) 10%;
+    text-align: center;
+}
+
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 10px var(--color-accent);
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        box-shadow: 0 0 40px var(--color-accent);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* --- 4. SERVICES SECTION --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.service-card {
+    background-color: var(--color-medium-dark);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 188, 212, 0.2);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+
+/* --- 5. ABOUT ME SECTION --- */
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content p {
+    color: var(--color-text-fade);
+    margin-bottom: var(--spacing-md);
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-medium-dark);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.stat-item {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.stat-item i {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+
+
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.stat-item p {
+    color: var(--color-text-light);
+    font-weight: 500;
+}
+
+/* --- 6. FOOTER --- */
+.footer {
+    background-color: #0d0d0d;
+    padding: 2rem var(--spacing-lg);
+    text-align: center;
+}
+
+.footer .social-links a {
+    font-size: 1.5rem;
+    margin: 0 0.75rem;
+    color: var(--color-text-fade);
+}
+
+.footer .social-links a:hover {
+    color: var(--color-accent);
+}
+
+.footer .quick-links {
+    margin: 1rem 0;
+}
+.myInterests{
+    text-align: center;
+}
+.myFuturePlan{
+    text-align: center;
+}
+.footer .quick-links a {
+    margin: 0 0.75rem;
+    color: var(--color-text-fade);
+}
+
+.footer p {
+    color: var(--color-text-fade);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* --- Responsive Design (Prompt 6) --- */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem var(--spacing-md);
+    }
+
+    .nav {
+        /* Hide nav links on smaller screens (will be toggled by JS in a real app) */
+        display: none; 
+    }
+
+
+    .stats-grid {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .footer .quick-links a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+
+
+
+
+
+/* ===== PROJECT SECTION ===== */
+#projects {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#projects h3 {
+  font-size: 1.5rem;
+  color: #15b1b1;
+  margin-bottom: 0.5rem;
+}
+
+#projects p {
+  color: #f8f8f8;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #162221;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 28%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.project-card .tech {
+  font-style: italic;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.btn, .btn-outline {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn-outline {
+  border: 1.5px solid #2563eb;
+  color: #2563eb;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+}

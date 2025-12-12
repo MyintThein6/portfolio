@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/Myint_thein_professional.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myint Thein | Junior Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">Myint Thein</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about1.html">About</a>
+            <a href="project2.html">Projects</a>
+            <a href="contact3.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="toggle navigation menu">
+            <span class="hamburger"></span>
+        </button>
+    </header>
+
+    <main>
+        <br><br><br>
+
+        <!-- ===== PROJECT SECTION ===== -->
+        <section id="projects">
+            <h3>My Projects</h3>
+            <p>These are some of the works I’ve done in web development and design.</p>
+          <br><br>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <img src="images/portfolio-website-image.png" alt="Portfolio Website Screenshot">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A fully responsive personal website showcasing my projects, resume, and contact information.</p>
+                    <p class="tech">Tech: HTML, CSS, JavaScript</p>
+                    <a href="#" class="btn">Live Demo</a>
+                    <a href="#" class="btn-outline">GitHub</a>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <img src="images/organization-webpage.png" alt="organization-webpage Screenshot">
+                    <h3>An organization webpage</h3>
+                    <p>A simple task webpage that allows users to see contents and how the organization existing.</p>
+                    <p class="tech">Tech: HTML, CSS</p>
+                    <a href="https://myintthein6.github.io/justiceeducation/" class="btn" target="_blank">Live Demo</a>
+                    <a href="https://github.com/MyintThein6/justiceeducation" class="btn-outline" target="_blank">GitHub</a>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <img src="images/shopping.png.png" alt="shopping Screenshot">
+                    <h3>Shopping for fashion Clothes Website</h3>
+                    <p>A web app that fashion clothes selling for men, women, children, and some equiptments.</p>
+                    <p class="tech">Tech: HTML, CSS, JS</p>
+                    <a href="https://myintthein6.github.io/Fashionhub/" target="_blank" class="btn">Live Demo</a>
+                    <a href="https://github.com/MyintThein6/Fashionhub" target="_blank" class="btn-outline">GitHub</a>
+                </article>
+            </div>
+        </section>
+
+
+
+        <!-- JS (optional simple form handler) -->
+        <script>
+            const form = document.getElementById("contact-form");
+            const status = document.getElementById("form-status");
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                status.hidden = false;
+                status.style.color = "#16a34a";
+                status.textContent = "✅ Message sent successfully!";
+                form.reset();
+            });
+        </script>
+</body>
+
+</html>
+<br><br><br><br>
+
+<section class="services">
+    <h2>Planing to do this projects</h2>
+    <div class="services-grid">
+        <div class="service-card">
+           <i class="fa-solid fa-cloud-showers-water"></i>
+            <h3>Weather Condition Website</h3>
+            <p>Stay updated with real-time weather conditions, accurate forecasts, and alerts tailored to your location</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-school"></i>
+            <h3>University Website</h3>
+            <p>Empowering university service with world-class education, innovative research opportunities, and a vibrant campus community</p>
+        </div>
+        <div class="service-card">
+           <i class="fa-solid fa-hotel"></i>
+            <h3>Hotel Service website</h3>
+            <p>Hotel that Feel like home with offering cozy rooms, friendly service, and a relaxing atmosphere.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/myint-thein-609134381/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/MyintThein6" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/ray.reh.2025" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="quick-links">
+        <a href="index.html">Home</a>
+        <a href="project2.html">Projects</a>
+        <a href="contact3.html">Contact</a>
+    </div>
+    <p>&copy; 2025 Myint Thein | All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

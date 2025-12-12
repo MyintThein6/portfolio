@@ -1,0 +1,56 @@
+/* ====== PRIVACY POLICY PAGE ====== */
+.privacy-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", Arial, sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.privacy-container h1 {
+  text-align: center;
+  color: #111827;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.privacy-container h2 {
+  margin-top: 1.5rem;
+  color: #1f2937;
+  font-size: 1.3rem;
+}
+
+.privacy-container ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.privacy-container a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.privacy-container a:hover {
+  text-decoration: underline;
+}
+
+.privacy-container p {
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+@media (max-width: 600px) {
+  .privacy-container {
+    padding: 1.5rem;
+  }
+  .privacy-container h1 {
+    font-size: 1.6rem;
+  }
+  .privacy-container h2 {
+    font-size: 1.1rem;
+  }
+}
